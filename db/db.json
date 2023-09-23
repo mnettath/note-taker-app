@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"Test Title","text":"Test text","note_id":1},{"title":"Bank","text":"Deposit check","note_id":"b069fde7-042c-4950-b9ec-86798b29323b"}]
