@@ -61,6 +61,7 @@ app.post("/api/notes", (req, res) => {
             console.log(
               `Note for ${newNote.title} has been written to JSON file`
             );
+            res.json(notes);
           }
         }
       );
