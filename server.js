@@ -69,6 +69,51 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
+// delete item
+// needs to read the file first
+// needs to figure out which task to target
+// array method to take out that selected task
+// rewrite the file
+app.delete("/api/notes/:id", (req, res) => {
+  // stores the value of the "id" param of the note we want to delete
+  const deleteNote = req.params.id;
+  console.log(deleteNote);
+
+  fs.readFile(path.join(__dirname, "db", "db.json"), "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+    }
+
+    const notes = JSON.parse(data || "[]");
+
+    // searches for the index of the deleted note in the array
+    const noteIndex = notes.findIndex((note) => note.id === deleteNote);
+
+    const deleteNoteObject = notes[noteIndex];
+
+    // find noteIndex in the array and only one element
+    notes.splice(noteIndex, 1);
+
+    // Rewrite db.json
+    fs.writeFile(
+      path.join(__dirname, "db", "db.json"),
+      JSON.stringify(notes),
+      (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(
+            `Note for ${deleteNoteObject.title} has been deleted from JSON file`
+          );
+          res.json(notes);
+        }
+      }
+    );
+  });
+});
+
 app.listen(
   PORT,
   () => console.log(`Express server listening on port ${PORT}!`) // (BOILERPLATE)
