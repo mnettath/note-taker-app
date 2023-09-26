@@ -14,6 +14,8 @@ The user will first be presented with the homepage of the note taker app. The"Ge
 
 ![Note Taker App Screenshot](public/assets/images/NoteTakerScreenshot.png)
 
+Link to deployed app: https://small-business-note-app-bbd345fcd895.herokuapp.com/notes
+
 ## Credits
 
 N/A
