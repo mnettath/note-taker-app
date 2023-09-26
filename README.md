@@ -2,24 +2,17 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+I worked on this note taker app to help small business owners be able to write and save notes. This can help them better organize their thoughts and keep track of tasks they need to complete. While working on this app, I familiarized myself with working with an Express.js server. I was able to better understand API routes and create logic to make the webpage interactive and user friendly. A challenge that I had was handling DELETE requests. Up to that point, I had only learned GET and POST requests. However, pseudo coding what the request needed to handle made me realize that the process was very similar to the POST request which I already understood how to do.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+The user will first be presented with the homepage of the note taker app. The"Get Started" button will take them to the notes page. The user can click on the right column to write a new note. The note must include both a title and text. Once both of these fields have been filled out, a save icon will appear in the upper right corner. The user can click on the save icon and the note will be added to the left saved notes column. To view a saved note, the user can click on the note and it will appear larger on the right column. To create a new note after viewing a saved note, the user can click on the "+" icon at the upper right corner. To delete a note, the user just needs to click on the "trash" icon. Notes will persist in the way the user selected, even if the page is refreshed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![Note Taker App Screenshot](public/assets/images/NoteTakerScreenshot.png)
 
 ## Credits
 
