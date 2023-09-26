@@ -28,7 +28,7 @@ app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "db", "db.json"));
 });
 
-// POST /api/notes should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+// POST /api/notes should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client.
 app.post("/api/notes", (req, res) => {
   const { title, text } = req.body;
 
@@ -69,11 +69,7 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
-// delete item
-// needs to read the file first
-// needs to figure out which task to target
-// array method to take out that selected task
-// rewrite the file
+// DELETE /api/notes/:id should read the db.json file, delete the note the user selected, and then rewrite the db.json file
 app.delete("/api/notes/:id", (req, res) => {
   // stores the value of the "id" param of the note we want to delete
   const deleteNote = req.params.id;
