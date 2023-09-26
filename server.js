@@ -3,7 +3,7 @@ const express = require("express"); // (BOILERPLATE)
 const path = require("path");
 const fs = require("fs"); // required to read and write files
 
-const PORT = 3001; // (BOILERPLATE)
+const PORT = process.env.PORT || 3001; // (BOILERPLATE)
 
 const app = express(); // (BOILERPLATE)
 
